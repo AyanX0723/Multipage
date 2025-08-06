@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjivani University</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle, #ffd6e0 40%, #39eded 100%);
+    margin: 0;
+    padding: 0;
+    }
+
+    header {
+      background-color: #3edbea;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0c0c0c;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background: #575757;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* Courses Section */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .course-card {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Students Section */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #all-students-list {
+      margin-top: 10px;
+      list-style: none;
+    }
+
+    /* Contact Section */
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+
+    form button {
+      background: #004080;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    /* Hide all sections except home */
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Sanjivani College</h1>
+  </header>
+
+  <nav>
+    <a href="#" data-page="home">Home</a>
+    <a href="#" data-page="courses">Courses</a>
+    <a href="#" data-page="students">Students</a>
+    <a href="#" data-page="about">About</a>
+    <a href="#" data-page="contact">Contact</a>
+  </nav>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="active">
+      <h2>Your Future Begins Here</h2>
+      <p>This is the home page of Sanjivani College. Navigate using the buttons above.</p>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses">
+      <h1>Courses Offered</h1>
+      <div class="courses-grid">
+        <div class="course-card">
+          <h3>CSE</h3>
+          <p>Computer Science & Engineering (CSE) focuses on software development, system architecture, AI, and networking.</p>
+        </div>
+        <div class="course-card">
+          <h3>BCA</h3>
+          <p>Bachelor of Computer Applications is a 3-year undergraduate program that introduces students to IT and programming.</p>
+        </div>
+        <div class="course-card">
+          <h3>MCA</h3>
+          <p>Master of Computer Applications is a 2-year program offering advanced training in application development and software engineering.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Students -->
+    <section id="students">
+      <h2>Our Bright Minds - MCA Students</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sr.No</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Achievements</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Tanmay Jadhav</td>
+            <td>First</td>
+            <td>Won Inter-University Coding Hackathon</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Ayan Pathan</td>
+            <td>First</td>
+            <td>Published paper in IJCA</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Suyog Kulkarni</td>
+            <td>First</td>
+            <td>Placed at Infosys</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="showAllBtn">Show All Students</button>
+      <ul id="all-students-list" style="display:none;">
+        <li>Tanmay Jadhav</li>
+        <li>Ayan Pathan</li>
+        <li>Suyog Kulkarni</li>
+        <li>Sahil Patil</li>
+        <li>Megha Singh</li>
+        <li>Vijay Bansal</li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Sanjivani College</h2>
+      <p>Excellence in education, research, and leadership.</p>
+      <h3>Our Vision</h3>
+      <p>To become a leading institution in higher education fostering innovation and leadership.</p>
+      <h3>Our Mission</h3>
+      <p>To provide a comprehensive and holistic education that empowers students to be global citizens.</p>
+      <h3>Infrastructure & Facilities</h3>
+      <p>Modern campus with fully equipped labs, libraries, smart classrooms, and hostels.</p>
+      <h3>Accreditations & Rankings</h3>
+      <p>Accredited by NAAC with an 'A' grade and recognized by UGC and AICTE.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Email: <input type="email" name="email" required></label><br>
+        <label>Message: <textarea name="message" required></textarea></label><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sanjivani College. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll("main section");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = link.dataset.page;
+
+        sections.forEach(section => {
+          section.classList.remove("active");
+        });
+
+        document.getElementById(target).classList.add("active");
+      });
+    });
+
+    document.getElementById("showAllBtn").addEventListener("click", () => {
+      const list = document.getElementById("all-students-list");
+      list.style.display = list.style.display === "none" ? "block" : "none";
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thank you for contacting us!");
+    });
+  </script>
+</body>
+</html>
