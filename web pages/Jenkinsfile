@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/username/multipage.git'
+                git 'https://github.com/AyanX0723/Multipage.git'
             }
         }
 
