@@ -1,0 +1,19 @@
+name: CI-CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: List files
+      run: dir
+
+    - name: Deploy website
+      run: echo "Deploying multipage website"
