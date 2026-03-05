@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/username/multipage.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                bat 'echo Building website'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                bat 'echo Deploying website'
+            }
+        }
+    }
+}
